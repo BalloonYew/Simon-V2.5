@@ -6,6 +6,7 @@ package Layouts1;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 
+
 public class FraMain extends JFrame {
 
     FraMain() {
@@ -14,8 +15,11 @@ public class FraMain extends JFrame {
         setTitle("Simon Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(panMain);
+        setResizable(false);
         setVisible(true);
         
 
     }
 }
+
+
