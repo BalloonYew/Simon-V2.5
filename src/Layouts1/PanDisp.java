@@ -23,8 +23,6 @@ public class PanDisp extends JPanel // panel definition
     void UpdateLabel(String _sNew) {
         sLabel = _sNew;
         lblName.setText(sLabel);
-         
-
-        
-    }    
+    }
+    
 }

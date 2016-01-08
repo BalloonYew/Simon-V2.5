@@ -5,12 +5,12 @@ import java.awt.*;
 
 public class PanMain extends JPanel // panel definition
 {
-
+    PanDisp panDisp = new PanDisp();
     PanDisp panDisp1 = new PanDisp();
     PanDisp panDisp2 = new PanDisp();
     PanDisp panDisp3 = new PanDisp();
     PanDisp panDisp4 = new PanDisp();
-    PanLabelChange panLabelChange = new PanLabelChange(panDisp1, panDisp2, panDisp3, panDisp4);
+    PanButtons panLabelChange = new PanButtons(panDisp1, panDisp2, panDisp3, panDisp4);
 
     public PanMain() {
         // this next line tells PanMain that it has a border layout.
