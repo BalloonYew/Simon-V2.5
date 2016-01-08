@@ -31,6 +31,7 @@ public class PanButtons extends JPanel { // panel definition
     public PanButtons(PanDisp _panDisp1, PanDisp _panDisp2, PanDisp _panDisp3, PanDisp _panDisp4) {
 
         //Images being loaded in
+        // in a file in the final report
         imageYell = new ImageIcon("H:\\Profile\\Desktop\\JavaSimon\\yellow.png");
         imageRed = new ImageIcon("H:\\Profile\\Desktop\\JavaSimon\\red.png");
         imageGreen = new ImageIcon("H:\\Profile\\Desktop\\JavaSimon\\green.png");
@@ -44,7 +45,7 @@ public class PanButtons extends JPanel { // panel definition
         panDisp2 = _panDisp2;
         panDisp3 = _panDisp3;
         panDisp4 = _panDisp4;
-//        time = new Timer(1000, (ActionListener) task);
+
 //set layout and gives each button a name and the image associated with it
         setLayout(new GridLayout(3, 3));
         btnYell = new JButton("1", imageDarkYell);
@@ -52,13 +53,13 @@ public class PanButtons extends JPanel { // panel definition
         btnGreen = new JButton("3", imageDarkGreen);
         btnBlue = new JButton("4", imageDarkBlue);
         btnStart = new JButton("Start");
-
+//add buttons to make them visible
         add(btnYell);
         add(btnRed);
         add(btnGreen);
         add(btnBlue);
         add(btnStart);
-
+//when the buttons are pressed they will switch to the lightup pictres
         btnYell.setPressedIcon(imageYell);
         btnRed.setPressedIcon(imageRed);
         btnGreen.setPressedIcon(imageGreen);
@@ -87,11 +88,6 @@ public class PanButtons extends JPanel { // panel definition
 
 
                 //Changes the four background pannes colours
-                //RED
-
-
-
-
                 if (sName == "2") {
                     panDisp1.setBackground(Color.red);
                     panDisp2.setBackground(Color.red);
@@ -133,6 +129,8 @@ public class PanButtons extends JPanel { // panel definition
                         arnUser[j] = 1;
                         j++;
                     }
+
+                    //starts the game makes the computer generate a random code
                 } else if (sName == "Start") {
 
                     for (int i = 0; i < 5; i++) {
@@ -140,7 +138,7 @@ public class PanButtons extends JPanel { // panel definition
                         System.out.println(arnComp[i]);
                     }
                     for (int i = 0; i < 5; i++) {
-
+                        //flashes each button when the computer picks one
                         if (arnComp[i] == 1) {
                             btnYell.doClick();
                             try {
@@ -148,7 +146,7 @@ public class PanButtons extends JPanel { // panel definition
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-                           
+
                             //timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                         if (arnComp[i] == 2) {
@@ -179,6 +177,7 @@ public class PanButtons extends JPanel { // panel definition
                             // timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                     }
+                    //win/lose counters number of clicks reset
                     j = 0;
                     nCount = 0;
                     nW = 0;
@@ -193,6 +192,7 @@ public class PanButtons extends JPanel { // panel definition
                             nCount++;
                         }
                     }
+                    //checks if you win or lose
                     if (nCount == 5) {
                         nW++;
                         JOptionPane.showMessageDialog(null, "You Win");
@@ -205,6 +205,7 @@ public class PanButtons extends JPanel { // panel definition
                     System.out.println("win " + nW + " Lose " + nL);
                     j = 0;
                     CompTurn = true;
+                    //generates a random nuber between 1-4
                     for (int i = 0; i < 5; i++) {
                         arnComp[i] = (int) (Math.random() * 4 + 1);
                         System.out.println(arnComp[i]);
@@ -256,6 +257,7 @@ public class PanButtons extends JPanel { // panel definition
                 }
             }
         }
+
         ActionListener labelChangeListener = new LabelChangeListener();
 
         btnYell.addActionListener(labelChangeListener);
