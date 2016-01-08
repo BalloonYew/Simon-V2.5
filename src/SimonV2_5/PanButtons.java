@@ -142,13 +142,13 @@ public class PanButtons extends JPanel { // panel definition
                     for (int i = 0; i < 5; i++) {
 
                         if (arnComp[i] == 1) {
-                            btnYell.setIcon(imageYell);
+                            btnYell.doClick();
                             try {
                                 Thread.currentThread().sleep(1000);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-                            btnYell.setIcon(imageDarkYell);
+                           
                             //timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                         if (arnComp[i] == 2) {
