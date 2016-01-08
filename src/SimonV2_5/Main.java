@@ -1,4 +1,4 @@
-package Layouts1;
+package SimonV2_5;
 
 public class Main {
 

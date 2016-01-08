@@ -1,4 +1,4 @@
-package Layouts1;
+package SimonV2_5;
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -140,16 +140,16 @@ public class PanButtons extends JPanel { // panel definition
                         System.out.println(arnComp[i]);
                     }
                     for (int i = 0; i < 5; i++) {
-                        
-                        if(arnComp[i] == 1) {
-                            btnYell.doClick();
+
+                        if (arnComp[i] == 1) {
+                            btnYell.setIcon(imageYell);
                             try {
                                 Thread.currentThread().sleep(1000);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-
-                           //timer.scheduleAtFixedRate(tTask, 1000, 1000);
+                            btnYell.setIcon(imageDarkYell);
+                            //timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                         if (arnComp[i] == 2) {
                             btnRed.doClick();
@@ -158,7 +158,7 @@ public class PanButtons extends JPanel { // panel definition
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-                     //       timer.scheduleAtFixedRate(tTask, 1000, 1000);
+                            //       timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                         if (arnComp[i] == 3) {
                             btnGreen.doClick();
@@ -167,7 +167,7 @@ public class PanButtons extends JPanel { // panel definition
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-                          //  timer.scheduleAtFixedRate(tTask, 1000, 1000);
+                            //  timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                         if (arnComp[i] == 4) {
                             btnBlue.doClick();
@@ -176,7 +176,7 @@ public class PanButtons extends JPanel { // panel definition
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-                           // timer.scheduleAtFixedRate(tTask, 1000, 1000);
+                            // timer.scheduleAtFixedRate(tTask, 1000, 1000);
                         }
                     }
                     j = 0;

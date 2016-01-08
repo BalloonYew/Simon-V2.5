@@ -1,4 +1,4 @@
-package Layouts1;
+package SimonV2_5;
 
 import javax.swing.*;
 import java.awt.*;
